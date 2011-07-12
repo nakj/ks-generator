@@ -1,5 +1,73 @@
 
 
+SL6 をインストール
+
+- dhcpdを設定
+  - yum install dhcpd 
+
+  - edit /etc/dhcp/dhcpd.conf
+
+option domain-name "localdomain";
+option domain-name-servers 192.168.62.1;
+authoritative;
+
+default-lease-time 600;
+max-lease-time 7200;
+log-facility local7;
+subnet 192.168.1.0 netmask 255.255.255.0 {
+}
+
+subnet 192.168.56.0 netmask 255.255.255.0 {
+}
+
+subnet 192.168.62.0 netmask 255.255.255.0 {
+option routers 192.168.62.1;
+option subnet-mask 255.255.255.0;
+option domain-name "localdomain";
+option domain-name-servers 192.168.62.1;
+range dynamic-bootp 192.168.62.128 192.168.62.200;
+next-server 192.168.62.254;
+filename "pxelinux.0";
+}
+
+- tftpbootを設定
+  yum install syslinux tftp-server
+
+    7  yum groupinstall "Web Server"
+   11  chkconfig tftp on
+   38  cp /usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/
+   39  mkdir /var/lib/tftpboot/pxelinux.cfg
+   40  mkdir -p /var/pxe/sl6
+   41  mkdir /var/lib/tftpboot/sl6
+
+   43  mount /dev/sr0 /var/pxe/sl6/
+   44  cp /var/pxe/sl6/images/pxeboot/vmlinuz  /var/lib/tftpboot/sl6/
+   45  cd /var/lib/tftpboot/
+   53  cp /var/pxe/sl6/images/pxeboot/vmlinuz /var/lib/tftpboot/sl6/
+   54  cp /var/pxe/sl6/images/pxeboot/initrd.img /var/lib/tftpboot/sl6/
+   55  cp /usr/share/syslinux/menu.c32 /var/lib/tftpboot/
+   58  vi /var/lib/tftpboot/pxelinux.cfg/default
+-----
+timeout 100
+default menu.c32
+
+menu title ########## PXE Boot Menu ##########
+label 1
+   menu label ^1) Install Scientific Linux 6
+   kernel sl6/vmlinuz
+   #append initrd=sl6/initrd.img method=http://10.0.0.50/sl6 devfs=nomount
+   append initrd=sl6/initrd.img ks=http://192.168.62.254:/ks/sl6-ks.cfg ksdevice=eth0
+
+label 2
+   menu label ^2) Boot from local drive
+   localboot
+-----
+
+  116  /etc/init.d/iptables stop
+
+参考URL
+
+http://www.server-world.info/query?os=Scientific_Linux_6&p=pxe&f=2
 
 
 
