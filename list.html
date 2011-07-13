@@ -1,7 +1,7 @@
 <html>
 <body>
 <h1></h1>
-<form action="/cgi-bin/test.cgi" method="get">
+<form action="/ks/test.cgi" method="post">
 <h1>RHEL6</h1>
 <h2>1-1. OS基本設定</h2>
 <table border=1 id=basic>
@@ -31,25 +31,39 @@
 </tr>
 <tr>
   <th>ブートローダパスワード</th>
-  <td><input type="radio" name="grubpw" value="false"> 設定しない</td>
+  <td><input type="radio" name="grubpw" value="false" checked> 設定しない</td>
   <td><input type="radio" name="grubpw" value="true"> 設定する<input type="text" name="grubpasswd"></td>
 </tr>
 <tr>
   <th>rootパスワード</th>
-  <td><input type="radio" name="rootpw" value="password" chekced>password</td>
+  <td><input type="radio" name="rootpw" value="password" checked>password</td>
   <td><input type="radio" name="rootpw" value="other" >それ以外
     <input type="text" name="rootpass">
   </td>
 </tr>
 <tr>
-  <th>タイムゾーン</th>
-  <td><input type="radio" name="tz" value="Asia/Tokyo">アジア/東京</td>
+  <th rowspan=2>タイムゾーン</th>
+  <td><input type="radio" name="tz" value="Asia/Tokyo" checked>アジア/東京</td>
   <td><input type="radio" name="tz" value="other">それ以外</td>
 </tr>
-
+<tr>
+  <td colspan=2 ><input type="checkbox" name="utc" value="true">UTCを使用する</td>
 
 </table>
+<h2>2. ドライブ設定</h2>
+
+<h2>3. ネットワークインターフェース設定</h2>
+<h2>4-1. パッケージ選択</h2>
+<table border=1>
+
+
+
+
 <input type="submit" value="送信">
+
+
+
+
 </form>
 </body>
 </html>

@@ -1,0 +1,520 @@
+    <id>additional-devel</id>
+    <name xml:lang="ja">その他の開発</name>
+    <description xml:lang="ja">アプリケーションを開発するためのその他開発ヘッダおよびライブラリ</description>
+    <id>afrikaans-support</id>
+    <name xml:lang="ja">アフリカーンス語のサポート</name>
+    <id>albanian-support</id>
+    <name xml:lang="ja">アルバニア語のサポート</name>
+    <id>amazigh-support</id>
+    <name xml:lang="ja">アマジグ語のサポート</name>
+    <id>arabic-support</id>
+    <name xml:lang="ja">アラビア語のサポート</name>
+    <id>armenian-support</id>
+    <name xml:lang="ja">アルメニア語のサポート</name>
+    <id>assamese-support</id>
+    <name xml:lang="ja">アッサム語のサポート</name>
+    <id>azerbaijani-support</id>
+    <name xml:lang="ja">アゼルバイジャン語のサポート</name>
+    <id>backup-client</id>
+    <name xml:lang="ja">クライアントをバックアップ</name>
+    <description xml:lang="ja">バックアップサーバーに接続しバックアップを実行するためのクライアントツール</description>
+    <id>backup-server</id>
+    <name xml:lang="ja">サーバーをバックアップ</name>
+    <description xml:lang="ja">インフラストラクチャのバックアップを集中化するソフトウェアです。</description>
+    <id>base</id>
+    <name xml:lang="ja">ベース</name>
+    <description xml:lang="ja">Scientific Linux の基本インストール</description>
+    <id>basic-desktop</id>
+    <name xml:lang="ja">デスクトップ</name>
+    <description xml:lang="ja">シンクライアントとして使用できる最低限のデスクトップ</description>
+    <id>basque-support</id>
+    <name xml:lang="ja">バスク語のサポート</name>
+    <id>belarusian-support</id>
+    <name xml:lang="ja">ベラルーシ語のサポート</name>
+    <id>bengali-support</id>
+    <name xml:lang="ja">ベンガル語のサポート</name>
+    <id>bhutanese-support</id>
+    <name xml:lang="ja">ブータン語のサポート</name>
+    <id>brazilian-support</id>
+    <name xml:lang="ja">ブラジル系ポルトガル語のサポート</name>
+    <id>breton-support</id>
+    <name xml:lang="ja">ブルターニュ語のサポート</name>
+    <id>british-support</id>
+    <name xml:lang="ja">英語 (イギリス) のサポート</name>
+    <id>buildsys-build</id>
+    <name xml:lang="ja">Buildsystem ビルドグループ</name>
+    <id>bulgarian-support</id>
+    <name xml:lang="ja">ブルガリア語のサポート</name>
+    <id>burmese-support</id>
+    <name xml:lang="ja">ミャンマー (ビルマ) 語のサポート</name>
+    <id>catalan-support</id>
+    <name xml:lang="ja">カタロニア語のサポート</name>
+    <id>chhattisgarhi-support</id>
+    <name xml:lang="ja">チャッティースガリー語のサポート</name>
+    <id>chichewa-support</id>
+    <name xml:lang="ja">チェワ語のサポート</name>
+    <id>chinese-support</id>
+    <name xml:lang="ja">中国語のサポート</name>
+    <id>cifs-file-server</id>
+    <name xml:lang="ja">CIFS ファイルサーバー</name>
+    <description xml:lang="ja">Linux システムと Microsoft Windows システムの間でファイルを共有します。</description>
+    <id>compat-libraries</id>
+    <name xml:lang="ja">互換性ライブラリ</name>
+    <description xml:lang="ja">旧バージョンの Scientific Linux によって構築されたアプリケーションに対する互換性ライブラリ</description>
+    <id>conflicts</id>
+    <name xml:lang="ja">競合 </name>
+    <description xml:lang="ja">このグループには サーバーの機種にある @everything インストールと競合するパッケージが 含まれています。</description>
+    <id>console-internet</id>
+    <name xml:lang="ja">コンソールインターネットツール</name>
+    <description xml:lang="ja">管理者によって頻繁に使用されるコンソールインターネットアクセスツール</description>
+    <id>coptic-support</id>
+    <name xml:lang="ja">コプト語のサポート</name>
+    <id>core</id>
+    <name xml:lang="ja">コア</name>
+    <description xml:lang="ja">最小限のインストール</description>
+    <id>croatian-support</id>
+    <name xml:lang="ja">クロアチア語のサポート</name>
+    <id>czech-support</id>
+    <name xml:lang="ja">チェコ語のサポート</name>
+    <id>danish-support</id>
+    <name xml:lang="ja">デンマーク語のサポート</name>
+    <id>debugging</id>
+    <name xml:lang="ja">デバッグツール</name>
+    <description xml:lang="ja">正しく動作しないアプリケーションをデバッグし、パフォーマンスの問題を分析するツールです。</description>
+    <id>desktop-debugging</id>
+    <name xml:lang="ja">デスクトップのデバッグとパフォーマンスツール</name>
+    <description xml:lang="ja">アプリケーションやパフォーマンスのデバッグを行うための GUI ツール</description>
+    <id>desktop-platform</id>
+    <name xml:lang="ja">デスクトッププラットフォーム</name>
+    <description xml:lang="ja">Scientific Linux Desktop Platform のサポート対象ライブラリです。</description>
+    <id>desktop-platform-devel</id>
+    <name xml:lang="ja">デスクトッププラットフォーム開発</name>
+    <description xml:lang="ja">Scientific Linux Desktop Platform 上で実行するアプリケーションを開発するための開発ヘッダおよびライブラリ</description>
+    <id>development</id>
+    <name xml:lang="ja">開発ツール　</name>
+    <description xml:lang="ja">基本的な開発環境</description>
+    <id>dial-up</id>
+    <name xml:lang="ja">ダイヤルアップネットワークサポート</name>
+    <description xml:lang="ja">PPP または ISDN より接続するためのツール</description>
+    <id>directory-client</id>
+    <name xml:lang="ja">ディレクトリクライアント</name>
+    <description xml:lang="ja">ディレクトリサービスによって管理されるネットワークに統合するためのクライアント</description>
+    <id>directory-server</id>
+    <name xml:lang="ja">ディレクトリサーバー</name>
+    <description xml:lang="ja">マシンおよびユーザー ID サーバー</description>
+    <id>dutch-support</id>
+    <name xml:lang="ja">オランダ語のサポート</name>
+    <id>eclipse</id>
+    <name xml:lang="ja">Eclipse</name>
+    <description xml:lang="ja">Eclipse ベースの統合開発環境</description>
+    <id>emacs</id>
+    <name xml:lang="ja">Emacs</name>
+    <description xml:lang="ja">拡張およびカスタマイズ可能な GNU Emacs テキストエディタ</description>
+    <id>esperanto-support</id>
+    <name xml:lang="ja">エスペラント語のサポート</name>
+    <id>estonian-support</id>
+    <name xml:lang="ja">エストニア語のサポート</name>
+    <id>ethiopic-support</id>
+    <name xml:lang="ja">エチオピア語のサポート</name>
+    <id>faroese-support</id>
+    <name xml:lang="ja">フェロー語のサポート</name>
+    <id>fijian-support</id>
+    <name xml:lang="ja">フィジー語のサポート</name>
+    <id>filipino-support</id>
+    <name xml:lang="ja">フィリピン語のサポート</name>
+    <id>finnish-support</id>
+    <name xml:lang="ja">フィンランド語のサポート</name>
+    <id>fonts</id>
+    <name xml:lang="ja">フォント</name>
+    <description xml:lang="ja">異なる言語やスクリプトにテキストをレンダリングするためのフォント</description>
+    <id>french-support</id>
+    <name xml:lang="ja">フランス語のサポート</name>
+    <id>frisian-support</id>
+    <name xml:lang="ja">フリジア語のサポート</name>
+    <id>friulian-support</id>
+    <name xml:lang="ja">フリウリ語のサポート</name>
+    <id>ftp-server</id>
+    <name xml:lang="ja">FTP サーバー</name>
+    <description xml:lang="ja">システムが FTP サーバーとして機能できるようにします。</description>
+    <id>gaelic-support</id>
+    <name xml:lang="ja">ゲール語のサポート</name>
+    <id>galician-support</id>
+    <name xml:lang="ja">ガリシア語のサポート</name>
+    <id>general-desktop</id>
+    <name xml:lang="ja">汎用デスクトップ</name>
+    <description xml:lang="ja">汎用デスクトップ</description>
+    <id>georgian-support</id>
+    <name xml:lang="ja">グルジア語のサポート</name>
+    <id>german-support</id>
+    <name xml:lang="ja">ドイツ語のサポート</name>
+    <id>graphical-admin-tools</id>
+    <name xml:lang="ja">グラフィカル管理ツール</name>
+    <description xml:lang="ja">システムの多くの側面を管理するためのグラフィカルシステム管理ツール</description>
+    <id>graphics</id>
+    <name xml:lang="ja">グラフィックスツール</name>
+    <description xml:lang="ja">静止画像の作成や修正を行うためのソフトウェアです。</description>
+    <id>greek-support</id>
+    <name xml:lang="ja">ギリシャ語のサポート</name>
+    <id>gujarati-support</id>
+    <name xml:lang="ja">グジャラート語のサポート</name>
+    <id>hardware-monitoring</id>
+    <name xml:lang="ja">ハードウェア監視ユーティリティ</name>
+    <description xml:lang="ja">サーバーハードウェアを管理する為のツールセット</description>
+    <id>hebrew-support</id>
+    <name xml:lang="ja">ヘブライ語のサポート</name>
+    <id>hiligaynon-support</id>
+    <name xml:lang="ja">ヒリガイノン語のサポート</name>
+    <id>hindi-support</id>
+    <name xml:lang="ja">ヒンディー語のサポート</name>
+    <id>hungarian-support</id>
+    <name xml:lang="ja">ハンガリー語のサポート</name>
+    <id>ice-desktop</id>
+    <id>icelandic-support</id>
+    <name xml:lang="ja">アイスランド語のサポート</name>
+    <id>indonesian-support</id>
+    <name xml:lang="ja">インドネシア語のサポート</name>
+    <id>infiniband</id>
+    <name xml:lang="ja">Infiniband のサポート</name>
+    <description xml:lang="ja">RDMA ベースの InfiniBand や iWARP ファブリックを使用してクラスタリングやグリッドの接続性を サポートするように設計されているソフトウェアです。</description>
+    <id>input-methods</id>
+    <name xml:lang="ja">入力メソッド</name>
+    <description xml:lang="ja">国際的なテキストを入力するためのソフトウェアです。</description>
+    <id>interlingua-support</id>
+    <name xml:lang="ja">インターリングア語のサポート</name>
+    <id>internet-applications</id>
+    <name xml:lang="ja">インターネットアプリケーション</name>
+    <description xml:lang="ja">電子メール、チャット、ビデオ会議のソフトウェアです。</description>
+    <id>internet-browser</id>
+    <name xml:lang="ja">インターネットブラウザ</name>
+    <description xml:lang="ja">Firefox Web ブラウザ</description>
+    <id>inuktitut-support</id>
+    <name xml:lang="ja">イヌクティトゥト語のサポート</name>
+    <id>irish-support</id>
+    <name xml:lang="ja">アイルランド語のサポート</name>
+    <id>italian-support</id>
+    <name xml:lang="ja">イタリア語のサポート</name>
+    <id>japanese-support</id>
+    <name xml:lang="ja">日本語のサポート</name>
+    <id>java-platform</id>
+    <name xml:lang="ja">Java プラットフォーム</name>
+    <description xml:lang="ja">Scientific Linux Server Platform と Desktop Platform の Java サポート</description>
+    <id>kannada-support</id>
+    <name xml:lang="ja">カンナダ語のサポート</name>
+    <id>kashmiri-support</id>
+    <name xml:lang="ja">カシミール語のサポート</name>
+    <id>kashubian-support</id>
+    <name xml:lang="ja">カシューブ語のサポート</name>
+    <id>kazakh-support</id>
+    <name xml:lang="ja">カザフ語のサポート</name>
+    <id>kde-desktop</id>
+    <name xml:lang="ja">KDE デスクトップ</name>
+    <description xml:lang="ja">KDE デスクトップ</description>
+    <id>khmer-support</id>
+    <name xml:lang="ja">クメール語のサポート</name>
+    <id>kinyarwanda-support</id>
+    <name xml:lang="ja">ルワンダ語のサポート</name>
+    <id>konkani-support</id>
+    <name xml:lang="ja">コンカニ語のサポート</name>
+    <id>korean-support</id>
+    <name xml:lang="ja">韓国語のサポート</name>
+    <id>kurdish-support</id>
+    <name xml:lang="ja">クルド語のサポート</name>
+    <id>lao-support</id>
+    <name xml:lang="ja">ラオ語のサポート</name>
+    <id>large-systems</id>
+    <name xml:lang="ja">大規模システムのパフォーマンス</name>
+    <description xml:lang="ja">大規模システム用パフォーマンスサポートツール</description>
+    <id>latin-support</id>
+    <name xml:lang="ja">ラテン語のサポート</name>
+    <id>latvian-support</id>
+    <name xml:lang="ja">ラトビア語のサポート</name>
+    <id>legacy-unix</id>
+    <name xml:lang="ja">レガシー UNIX の互換性</name>
+    <description xml:lang="ja">レガシー UNIX 環境の使用やこの環境からの移行するための互換性プログラム</description>
+    <id>legacy-x</id>
+    <name xml:lang="ja">レガシー X Windows システムの互換性</name>
+    <description xml:lang="ja">レガシー X Windows システム環境の使用やこの環境からの移行するための互換性プログラム</description>
+    <id>lithuanian-support</id>
+    <name xml:lang="ja">リトアニア語のサポート</name>
+    <id>low-saxon-support</id>
+    <name xml:lang="ja">低ザクセン語のサポート</name>
+    <id>luxembourgish-support</id>
+    <name xml:lang="ja">ルクセンブルグ語のサポート</name>
+    <id>macedonian-support</id>
+    <name xml:lang="ja">マケドニア語のサポート</name>
+    <id>mail-server</id>
+    <name xml:lang="ja">電子メールサーバー</name>
+    <description xml:lang="ja">システムが SMTP または IMAP 電子メールサーバーとして機能できるようにします。</description>
+    <id>mainframe-access</id>
+    <name xml:lang="ja">メインフレームアクセス</name>
+    <description xml:lang="ja">メインフレームコンピューティングリソースにアクセスするためのツール</description>
+    <id>maithili-support</id>
+    <name xml:lang="ja">マイチリ語のサポート</name>
+    <id>malagasy-support</id>
+    <name xml:lang="ja">マダガスカル語のサポート</name>
+    <id>malay-support</id>
+    <name xml:lang="ja">マレー語のサポート</name>
+    <id>malayalam-support</id>
+    <name xml:lang="ja">マラヤーラム語のサポート</name>
+    <id>maltese-support</id>
+    <name xml:lang="ja">マルタ語のサポート</name>
+    <id>manx-support</id>
+    <name xml:lang="ja">マン島語のサポート</name>
+    <id>maori-support</id>
+    <name xml:lang="ja">マオリ語のサポート</name>
+    <id>marathi-support</id>
+    <name xml:lang="ja">マラーティー語のサポート</name>
+    <id>misc-sl</id>
+    <id>mongolian-support</id>
+    <name xml:lang="ja">モンゴル語のサポート</name>
+    <id>mysql</id>
+    <name xml:lang="ja">MySQL データベースサーバー</name>
+    <description xml:lang="ja">MySQL の SQL データベースサーバーと関連パッケージ</description>
+    <id>mysql-client</id>
+    <name xml:lang="ja">MySQL データベースクライアント</name>
+    <description xml:lang="ja">MySQL の SQL データベースクライアントと関連パッケージ</description>
+    <id>nepali-support</id>
+    <name xml:lang="ja">ネパール語のサポート</name>
+    <id>network-file-system-client</id>
+    <name xml:lang="ja">ネットワークファイルシステムクライアント</name>
+    <description xml:lang="ja">システムがネットワークストレージに接続できるようにします。</description>
+    <id>network-server</id>
+    <name xml:lang="ja">ネットワークインフラストラクチャサーバー</name>
+    <description xml:lang="ja">DHCP や DNS などコアネットワークプロトコルやサービスのサーバーです。</description>
+    <id>network-tools</id>
+    <name xml:lang="ja">ネットワーキングツール</name>
+    <description xml:lang="ja">コンピュータネットワークを設定し分析するためのツール</description>
+    <id>nfs-file-server</id>
+    <name xml:lang="ja">NFS ファイルサーバー</name>
+    <description xml:lang="ja">NFS ファイルサーバー</description>
+    <id>northern-sotho-support</id>
+    <name xml:lang="ja">北ソト語のサポート</name>
+    <id>norwegian-support</id>
+    <name xml:lang="ja">ノルウェー語のサポート</name>
+    <id>occitan-support</id>
+    <name xml:lang="ja">ロクシタン語のサポート</name>
+    <id>office-suite</id>
+    <name xml:lang="ja">オフィススイートと生産性</name>
+    <description xml:lang="ja">全目的対応のオフィススイートおよびその他生産性ツール</description>
+    <id>openafs-client</id>
+    <id>oriya-support</id>
+    <name xml:lang="ja">オリヤー語のサポート</name>
+    <id>performance</id>
+    <name xml:lang="ja">パフォーマンスツール</name>
+    <description xml:lang="ja">システムおよびアプリケーションレベルのパフォーマンス問題を分析するツールです。</description>
+    <id>perl-runtime</id>
+    <name xml:lang="ja">Perl のサポート</name>
+    <description xml:lang="ja">一般的なライブラリや機能への Perl インターフェース。</description>
+    <id>persian-support</id>
+    <name xml:lang="ja">ペルシア語のサポート</name>
+    <id>php</id>
+    <name xml:lang="ja">PHP サポート</name>
+    <description xml:lang="ja">PHP Web アプリケーションフレームワーク。</description>
+    <id>polish-support</id>
+    <name xml:lang="ja">ポーランド語のサポート</name>
+    <id>portuguese-support</id>
+    <name xml:lang="ja">ポルトガル語のサポート</name>
+    <id>postgresql</id>
+    <name xml:lang="ja">PostgreSQL データベースサーバー</name>
+    <description xml:lang="ja">PostgreSQL の SQL データベースサーバーと関連パッケージ</description>
+    <id>postgresql-client</id>
+    <name xml:lang="ja">PostgreSQL データベースクライアント</name>
+    <description xml:lang="ja">PostgreSQL の SQL データベースクライアントと関連パッケージ</description>
+    <id>print-client</id>
+    <name xml:lang="ja">印刷クライアント</name>
+    <description xml:lang="ja">ローカルのプリンタやリモートプリントサーバーへ印刷するためのツールです。</description>
+    <id>print-server</id>
+    <name xml:lang="ja">プリントサーバー</name>
+    <description xml:lang="ja">システムがプリントサーバーとして機能できるようにします。</description>
+    <id>punjabi-support</id>
+    <name xml:lang="ja">パンジャブ語のサポート</name>
+    <id>remote-desktop-clients</id>
+    <name xml:lang="ja">リモートデスクトップクライアント</name>
+    <id>repos</id>
+    <id>romanian-support</id>
+    <name xml:lang="ja">ルーマニア語のサポート</name>
+    <id>russian-support</id>
+    <name xml:lang="ja">ロシア語のサポート</name>
+    <id>sanskrit-support</id>
+    <name xml:lang="ja">サンスクリット語のサポート</name>
+    <id>sardinian-support</id>
+    <name xml:lang="ja">サルディニア語のサポート</name>
+    <id>scalable-file-systems</id>
+    <name xml:lang="ja">拡張性ファイルシステム</name>
+    <description xml:lang="ja">大型で高度にスケーラブルなファイルシステムのサポートです。</description>
+    <id>scientific</id>
+    <name xml:lang="ja">科学的なサポート</name>
+    <description xml:lang="ja">数学的計算や科学的計算、並列計算のツールです。</description>
+    <id>security-tools</id>
+    <name xml:lang="ja">セキュリティツール</name>
+    <description xml:lang="ja">整合性や信用を検証するセキュリティツール</description>
+    <id>serbian-support</id>
+    <name xml:lang="ja">セルビア語のサポート</name>
+    <id>server-platform</id>
+    <name xml:lang="ja">サーバープラットフォーム</name>
+    <description xml:lang="ja">Scientific Linux Server Platform のサポート対象ライブラリです。</description>
+    <id>server-platform-devel</id>
+    <name xml:lang="ja">サーバープラットフォーム開発</name>
+    <description xml:lang="ja">Scientific Linux Server Platform 上で実行するアプリケーションを開発するための開発ヘッダおよびライブラリ</description>
+    <id>sindhi-support</id>
+    <name xml:lang="ja">シンド語のサポート</name>
+    <id>sinhala-support</id>
+    <name xml:lang="ja">シンハラ語のサポート</name>
+    <id>slovak-support</id>
+    <name xml:lang="ja">スロバキア語のサポート</name>
+    <id>slovenian-support</id>
+    <name xml:lang="ja">スロベニア語のサポート</name>
+    <id>smart-card</id>
+    <name xml:lang="ja">スマートカードのサポート</name>
+    <description xml:lang="ja">スマートカード認証の使用に対するサポートです。</description>
+    <id>somali-support</id>
+    <name xml:lang="ja">ソマリ語のサポート</name>
+    <id>southern-ndebele-support</id>
+    <name xml:lang="ja">ヌデベレ語のサポート</name>
+    <id>southern-sotho-support</id>
+    <name xml:lang="ja">南部ソト語のサポート</name>
+    <id>spanish-support</id>
+    <name xml:lang="ja">スペイン語のサポート</name>
+    <id>spins</id>
+    <id>storage-client-fcoe</id>
+    <name xml:lang="ja">FCoE ストレージクライアント</name>
+    <description xml:lang="ja">イーサネット上ファイバーチャンネル（FCoE）のサポート</description>
+    <id>storage-client-iscsi</id>
+    <name xml:lang="ja">iSCSI ストレージクライアント</name>
+    <description xml:lang="ja">iSCSI クライアントサポート</description>
+    <id>storage-client-multipath</id>
+    <name xml:lang="ja">ストレージ可用性ツール</name>
+    <description xml:lang="ja">SAN のパスの可用性を管理する為のツールセット</description>
+    <id>storage-server</id>
+    <name xml:lang="ja">ネットワークストレージサーバー</name>
+    <description xml:lang="ja">iSCSI、iSER、 iSNS ネットワークストレージサーバーです。</description>
+    <id>swahili-support</id>
+    <name xml:lang="ja">スワヒリ語のサポート</name>
+    <id>swati-support</id>
+    <name xml:lang="ja">スワチ語のサポート</name>
+    <id>swedish-support</id>
+    <name xml:lang="ja">スウェーデン語のサポート</name>
+    <id>system-admin-tools</id>
+    <name xml:lang="ja">システム管理ツール</name>
+    <description xml:lang="ja">システム管理に便利なユーティリティです。</description>
+    <id>system-management</id>
+    <name xml:lang="ja">システム管理</name>
+    <description xml:lang="ja">多様な低レベルハードウェア管理フレームワークです。</description>
+    <id>system-management-messaging-client</id>
+    <name xml:lang="ja">メッセージングクライアントのサポート</name>
+    <description xml:lang="ja">システム管理の為の AMQP メッセージングクライアント</description>
+    <id>system-management-messaging-server</id>
+    <name xml:lang="ja">メッセージングサーバーのサポート</name>
+    <description xml:lang="ja">システム管理の為の AMQP メッセージングブローカ</description>
+    <id>system-management-snmp</id>
+    <name xml:lang="ja">SNMP サポート</name>
+    <description xml:lang="ja">SNMP 管理エージェント</description>
+    <id>system-management-wbem</id>
+    <name xml:lang="ja">WBEM サポート</name>
+    <description xml:lang="ja">Scientific Linux の WBEM インターフェイス</description>
+    <id>tagalog-support</id>
+    <name xml:lang="ja">タガログ語のサポート</name>
+    <id>tajik-support</id>
+    <name xml:lang="ja">タジク語のサポート</name>
+    <id>tamil-support</id>
+    <name xml:lang="ja">タミール語のサポート</name>
+    <id>technical-writing</id>
+    <name xml:lang="ja">技術文書</name>
+    <description xml:lang="ja">技術文書を書くためのツールです。</description>
+    <id>telugu-support</id>
+    <name xml:lang="ja">テルグ語のサポート</name>
+    <id>tetum-support</id>
+    <name xml:lang="ja">テトゥン語のサポート</name>
+    <id>tex</id>
+    <name xml:lang="ja">TeX のサポート</name>
+    <description xml:lang="ja">TeX 文書フォーマットシステムのサポートです。</description>
+    <id>thai-support</id>
+    <name xml:lang="ja">タイ語のサポート</name>
+    <id>tibetan-support</id>
+    <name xml:lang="ja">チベット語のサポート</name>
+    <id>tsonga-support</id>
+    <name xml:lang="ja">ソンガス語のサポート</name>
+    <id>tswana-support</id>
+    <name xml:lang="ja">ツワナ語のサポート</name>
+    <id>turbogears</id>
+    <name xml:lang="ja">TurboGears アプリケーションフレームワーク</name>
+    <description xml:lang="ja">TurboGears Web アプリケーションフレームワーク</description>
+    <id>turkish-support</id>
+    <name xml:lang="ja">トルコ語のサポート</name>
+    <id>turkmen-support</id>
+    <name xml:lang="ja">トルクメン語のサポート</name>
+    <id>ukrainian-support</id>
+    <name xml:lang="ja">ウクライナ語のサポート</name>
+    <id>upper-sorbian-support</id>
+    <name xml:lang="ja">高地ソルブ語のサポート</name>
+    <id>urdu-support</id>
+    <name xml:lang="ja">ウルドゥー語のサポート</name>
+    <id>uzbek-support</id>
+    <name xml:lang="ja">ウズベク語のサポート</name>
+    <id>venda-support</id>
+    <name xml:lang="ja">ベンダ語のサポート</name>
+    <id>vietnamese-support</id>
+    <name xml:lang="ja">ベトナム語のサポート</name>
+    <id>virtualization</id>
+    <name xml:lang="ja">仮想化</name>
+    <description xml:lang="ja">仮想化ゲストをホストする環境を提供します。</description>
+    <id>virtualization-client</id>
+    <name xml:lang="ja">仮想化クライアント</name>
+    <description xml:lang="ja">仮想化インスタンスをインストールし管理するためのクライアント</description>
+    <id>virtualization-platform</id>
+    <name xml:lang="ja">仮想化プラットフォーム</name>
+    <description xml:lang="ja">仮想化ゲストとコンテナへアクセスしたり制御するためのインターフェースを提供します。</description>
+    <id>virtualization-tools</id>
+    <name xml:lang="ja">仮想化ツール</name>
+    <description xml:lang="ja">オフラインの仮想イメージ管理のためのツールです。</description>
+    <id>walloon-support</id>
+    <name xml:lang="ja">ワロン語のサポート</name>
+    <id>web-server</id>
+    <name xml:lang="ja">Web サーバー</name>
+    <description xml:lang="ja">システムが Web サーバとして機能し、Perl や Python Web アプリケーションを実行できるようにします。</description>
+    <id>web-servlet</id>
+    <name xml:lang="ja">Web サーブレットエンジン</name>
+    <description xml:lang="ja">システムが Java サーブレットをホストできるようにします。</description>
+    <id>welsh-support</id>
+    <name xml:lang="ja">ウェールズ語のサポート</name>
+    <id>x11</id>
+    <name xml:lang="ja">X Window System</name>
+    <description xml:lang="ja">X Window システムのサポート</description>
+    <id>xhosa-support</id>
+    <name xml:lang="ja">コサ語のサポート</name>
+    <id>zulu-support</id>
+    <name xml:lang="ja">ズールー語のサポート</name>
+    <id>base-system</id>
+    <name xml:lang="ja">ベースシステム</name>
+    <description xml:lang="ja">コアシステムコンポーネント</description>
+    <id>language-support</id>
+    <name xml:lang="ja">言語</name>
+    <description xml:lang="ja">これらのパッケージでは、フォントや入力メソッドなどの各種ロケールのサポートを提供しています。</description>
+    <id>servers</id>
+    <name xml:lang="ja">サーバー</name>
+    <description xml:lang="ja">多様なネットワークサービスです。</description>
+    <id>web-services</id>
+    <name xml:lang="ja">Web サービス</name>
+    <description xml:lang="ja">Web および Web アプリケーションサーバーです。</description>
+    <id>databases</id>
+    <name xml:lang="ja">データベース</name>
+    <description xml:lang="ja">SQL データベース</description>
+    <id>SL</id>
+    <id>system-management</id>
+    <name xml:lang="ja">システム管理</name>
+    <description xml:lang="ja">システム管理のフレームワーク</description>
+    <id>virtualization</id>
+    <name xml:lang="ja">仮想化</name>
+    <description xml:lang="ja">仮想化サポート</description>
+    <id>desktops</id>
+    <name xml:lang="ja">デスクトップ</name>
+    <description xml:lang="ja">デスクトップとシンクライアント</description>
+    <id>applications</id>
+    <name xml:lang="ja">アプリケーション</name>
+    <description xml:lang="ja">エンドユーザーアプリケーション</description>
+    <id>development</id>
+    <name xml:lang="ja">開発</name>
+    <description xml:lang="ja">開発ツールおよびライブラリ</description>
+    <id>scalablefilesystems</id>
+    <name xml:lang="ja">拡張性ファイルシステムサポート</name>
+    <description xml:lang="ja">大型で高拡張性ファイルシステムのサポートです。</description>
