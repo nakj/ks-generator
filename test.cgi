@@ -24,10 +24,15 @@ print "Content-Type: text/html\n\n"
 print "<html><body>inputdata= "
 
 p input
-class Confirm
-
-end
-
 
 
 print "</body></html>"
+class Confirm
+  def head
+    str = ""
+    
+  end
+
+  
+end
+
