@@ -20,20 +20,14 @@ class Foo
   def main
     input = CGI.new
     print "Content-Type: text/html\n\n"
-    
     print "<html><body>inputdata= "
 
     p input
 
-    
     print "<br><br><br><br><br>"
     c = self.parse(input)
     self.output(c)
     print "</body></html>"
-  end
-  def head
-    str = ""
-    
   end
   def parse(input)
     config ="#version RHEL6
@@ -71,11 +65,12 @@ url --url http://192.168.62.254/sl6
     config += rootpw
     return config
   end
+
+
   def output(config)
     print "<pre>"
     puts config
     print "</pre>"
-
   end
 end  
 
