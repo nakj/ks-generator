@@ -179,14 +179,74 @@
 </tr>
 <tr>
   <th rowspan=2>タイムゾーン</th>
-  <td><input type="radio" name="tz" value="Asia/Tokyo" checked>アジア/東京</td>
-  <td><input type="radio" name="tz" value="other">それ以外</td>
+  <td>
+</td><td>
+<select name=tz> 
+<option value="Africa/Johannesburg">Africa/Johannesburg</option>
+<option value="America/New_York">America/New_York</option>
+<option value="America/Sao_Paulo">America/Sao_Paulo</option>
+<option value="Asia/Colombo">Asia/Colombo</option>
+<option value="Asia/Dhaka">Asia/Dhaka</option>
+<option value="Asia/Dushanbe">Asia/Dushanbe</option>
+<option value="Asia/Jakarta">Asia/Jakarta</option>
+<option value="Asia/Jerusalem">Asia/Jerusalem</option>
+<option value="Asia/Kathmandu">Asia/Kathmandu</option>
+<option value="Asia/Kolkata">Asia/Kolkata</option>
+<option value="Asia/Kuala_Lumpur">Asia/Kuala_Lumpur</option>
+<option value="Asia/Manila">Asia/Manila</option>
+<option value="Asia/Riyadh">Asia/Riyadh</option>
+<option value="Asia/Saigon">Asia/Saigon</option>
+<option value="Asia/Seoul">Asia/Seoul</option>
+<option value="Asia/Shanghai">Asia/Shanghai</option>
+<option value="Asia/Taipei">Asia/Taipei</option>
+<option value="Asia/Tehran">Asia/Tehran</option>
+<option value="Asia/Tokyo" selected>Asia/Tokyo</option>
+<option value="Atlantic/Reykjavik">Atlantic/Reykjavik</option>
+<option value="Europe/Amsterdam">Europe/Amsterdam</option>
+<option value="Europe/Athens">Europe/Athens</option>
+<option value="Europe/Belgrade">Europe/Belgrade</option>
+<option value="Europe/Berlin">Europe/Berlin</option>
+<option value="Europe/Bratislava">Europe/Bratislava</option>
+<option value="Europe/Bucharest">Europe/Bucharest</option>
+<option value="Europe/Budapest">Europe/Budapest</option>
+<option value="Europe/Copenhagen">Europe/Copenhagen</option>
+<option value="Europe/Helsinki">Europe/Helsinki</option>
+<option value="Europe/Istanbul">Europe/Istanbul</option>
+<option value="Europe/Kiev">Europe/Kiev</option>
+<option value="Europe/Lisbon">Europe/Lisbon</option>
+<option value="Europe/Ljubljana">Europe/Ljubljana</option>
+<option value="Europe/London">Europe/London</option>
+<option value="Europe/Madrid">Europe/Madrid</option>
+<option value="Europe/Moscow">Europe/Moscow</option>
+<option value="Europe/Oslo">Europe/Oslo</option>
+<option value="Europe/Paris">Europe/Paris</option>
+<option value="Europe/Prague">Europe/Prague</option>
+<option value="Europe/Rome">Europe/Rome</option>
+<option value="Europe/Skopje">Europe/Skopje</option>
+<option value="Europe/Sofia">Europe/Sofia</option>
+<option value="Europe/Stockholm">Europe/Stockholm</option>
+<option value="Europe/Tallinn">Europe/Tallinn</option>
+<option value="Europe/Warsaw">Europe/Warsaw</option>
+<option value="Europe/Zagreb">Europe/Zagreb</option>
+</select>
+</td>
 </tr>
 <tr>
   <td colspan=2 ><input type="checkbox" name="utc" value="true">UTCを使用する</td>
 
 </table>
 <h2>2. ドライブ設定</h2>
+<table border=1>
+  <tr>
+    <th>ファイルシステム</th>
+    <td><input type="radio" name="fs" value="ext2">EXT2</input></td>
+    <td><input type="radio" name="fs" value="ext3">EXT3</input></td>
+    <td><input type="radio" name="fs" value="ext4" checked>EXT4</input></td>
+
+  </tr>
+</table>
+      
+
 
 <h2>3. ネットワークインターフェース設定</h2>
 <h2>4-1. パッケージ選択</h2>
@@ -407,6 +467,19 @@
 <tr><td><input type="checkbox" name="pkg.korean-support" value="true"> 韓国語のサポート</td><td></td></tr>
 <tr><td><input type="checkbox" name="pkg.upper-sorbian-support" value="true"> 高地ソルブ語のサポート</td><td></td></tr>
 </table>
+<h1>5. OS 拡張機能</h1>
+<h2>5.1 ファイアウォール設定</h2>
+<table border=1>
+  <tr>
+    <th rowspan=2> ファイアウォール設定</th>
+    <td><input type="radio" name="firewall" value="disabled">無効</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="firewall" value="enabled" checked>有効</td>
+  </tr>
+</td>
+
+
 
 </form>
 </body>
