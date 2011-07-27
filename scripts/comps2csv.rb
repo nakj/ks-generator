@@ -5,8 +5,8 @@
 RHEL6.0クローンのSL6で動作確認しています。
 0. 準備
    必要なパッケージをインストール
-   # yum install rubygems libxml2 libxml2-devel libxslt-devel libxslt
    # yum groupinstall "Development Tools"
+   # yum install rubygems ruby-devel
    gem ライブラリをインストール
    # gem install hpricot
 1.実行
