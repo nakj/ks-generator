@@ -28,10 +28,10 @@ class Foo
     print "<html><body>inputdata= "
 
     p input
-
+#    c = ""
     print "<br><br><br><br><br>"
     c = self.parse(input)
-    c = self.parse2(input)
+    c += self.parse2(input)
     c += self.parse3(input)
     self.output(c)
     print "</body></html>"
@@ -84,11 +84,13 @@ url --url http://192.168.62.254/sl6
     return config
   end
   def parse2(input)
+    config =""
     #disk layout
+    return config
   end
   def parse3(input)
     # package
-    pl = $pkglist 
+    pl = $pkglist
     config = ""
     config += "#Package Selection\n"
     config += "%packages\n"
