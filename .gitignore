@@ -1,2 +1,5 @@
 *~
-tmp/*
+tmp/*.cfg
+tmp/*.xml
+tmp/*.csv
+tmp/*list
