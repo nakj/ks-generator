@@ -2,6 +2,7 @@
 
 	* list.html: base packages are selected by default.
 	add stylesheet.
+	add disk0 partition table difinition.
 
 	* test.cgi: add firewall parse routine.
 
