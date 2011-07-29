@@ -63,8 +63,9 @@ a.map{|x|
    x[0] 
    x[1] = b.assoc(x[1])[1]
 }
-p a
+
 a.sort{|a,b| a[1] <=> b[1]}.each{|x|
-  printf('<tr><td><input type="checkbox" name="fw.%s" value="true">%s</input></td></tr>', x[0],x[1])
-  printf("\n")
+#  printf('<tr><td><input type="checkbox" name="fw.%s" value="true">%s</input></td></tr>', x[0],x[1])
+#  printf("\n")
+  p x[0]
 }
