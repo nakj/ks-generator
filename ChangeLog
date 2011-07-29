@@ -1,4 +1,7 @@
 2011-07-29    <jin@localhost.localdomain>
 
+	* list.html: base packages are selected by default.
+	add stylesheet.
+
 	* test.cgi: add firewall parse routine.
 

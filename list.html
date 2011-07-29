@@ -1,4 +1,13 @@
 <html>
+<head>
+<title>RHEL6 ks generator</title>
+<style type="text/css">
+<!--
+th { background-color: palegreen}
+.headline { background-color: deepskyblue }
+-->
+</style>
+</head>
 <body>
 <!--
     This file is part of ks-generator.
@@ -239,11 +248,18 @@
 <table border=1>
   <tr>
     <th>ファイルシステム</th>
-    <td><input type="radio" name="fs" value="ext2">EXT2</input></td>
-    <td><input type="radio" name="fs" value="ext3">EXT3</input></td>
-    <td><input type="radio" name="fs" value="ext4" checked>EXT4</input></td>
+    <td><input type="radio" name="fstype" value="ext2">EXT2</input></td>
+    <td><input type="radio" name="fstype" value="ext3">EXT3</input></td>
+    <td><input type="radio" name="fstype" value="ext4" checked>EXT4</input></td>
 
   </tr>
+</table>
+<p>
+<table border=1>
+  <tr><td colspan="8" align="center">DISK0</td></tr>
+  <tr><td colspan="8">ディスク名：<input type="text" name="disk0.name" value="sda"></td></tr>
+
+
 </table>
       
 
@@ -277,7 +293,7 @@
 <tr><td><input type="checkbox" name="pkg.hardware-monitoring" value="true"> ハードウェア監視ユーティリティ</td><td>サーバーハードウェアを管理するためのツールセット</td></tr>
 <tr><td><input type="checkbox" name="pkg.backup-client" value="true"> バックアップクライアント</td><td>バックアップサーバーに接続しバックアップを実行するためのクライアントツール</td></tr>
 <tr><td><input type="checkbox" name="pkg.performance" value="true"> パフォーマンスツール</td><td>システムおよびアプリケーションレベルのパフォーマンス問題を分析するツールです。</td></tr>
-<tr><td><input type="checkbox" name="pkg.base" value="true"> ベース</td><td>Red Hat Enterprise Linux の基本インストール</td></tr>
+<tr><td><input type="checkbox" name="pkg.base" value="true" checked> ベース</td><td>Red Hat Enterprise Linux の基本インストール</td></tr>
 <tr><td><input type="checkbox" name="pkg.mainframe-access" value="true"> メインフレームアクセス</td><td>メインフレームコンピューティングリソースにアクセスするためのツール</td></tr>
 <tr><td><input type="checkbox" name="pkg.legacy-unix" value="true"> レガシー UNIX の互換性</td><td>レガシー UNIX 環境の使用やこの環境からの移行するための互換性プログラム</td></tr>
 <tr><td><input type="checkbox" name="pkg.compat-libraries" value="true"> 互換性ライブラリ</td><td>旧バージョンの Red Hat Enterprise Linux によって構築されたアプリケーションに対する互換性ライブラリ</td></tr>
