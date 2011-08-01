@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# -*- coding: utf-8 -*-
 require "cgi-lib"
 =begin
     This file is part of ks-generator.
@@ -31,8 +32,9 @@ class Foo
     input.each{|x|
       p x
     }
+#    p input
     print "<pre>"
-#    c = ""
+
     print "<br><br><br><br><br>"
     c = self.parse(input)
     c += self.parse2(input)
@@ -109,6 +111,10 @@ url --url http://192.168.56.254/rhel6
   def parse2(input)
     #disk layout
     config =""
+
+    config += self.part(0,input)
+
+
     return config
   end
   def parse3(input)
@@ -135,6 +141,76 @@ url --url http://192.168.56.254/rhel6
     f = File.open("tmp/ks.cfg","w")
     f.puts(config)
   end
+  def part(i,input)
+    if input["disk#{i}.nomodify"] then
+      return ""
+    end
+    #input からディスクi に関するところだけ抜き出す
+    re = "^disk"  + i.to_s
+    di = {}
+    di['fstype'] = input['fstype']
+
+    input.each_pair{|key,value|
+      if key.match(re) then
+        unless value == "" then
+          #puts "#{key}: #{value}"
+          key = key.gsub(/^disk#{i}./,"")
+          di[key] = value
+        end
+      end
+    
+    }
+=begin
+#debug よう
+  di.sort.each{|x|
+    p x
+  }
+=end  
+    ret = ""
+    s = ""
+
+
+    for i in 1..10
+      s = slices(i,di)
+      unless s == nil then
+        ret += s
+      end
+
+    end
+    return ret
+
+  end
+
+  def slices(i,di)
+
+    dsk = di['name']
+
+    label = di["part#{i}.label"]
+    odd = di['odd'].gsub(/^disk[0-9]\.part/,"").gsub(/.odd$/,"")
+    parttype = di["part#{i}.parttype"]
+    fs = di['fstype']
+    if label == "swap" then
+      fs = "swap"
+    end
+    if odd.to_i == i then
+      size = "grow"
+    else
+      size = di["part#{i}.size"]
+    end
+    unless size == nil then
+      if size == "grow" then
+        ret = "part #{label} --fstype=#{fs} --size=1 --grow --ondisk=#{dsk}"
+      else 
+        ret = "part #{label} --fstype=#{fs} --size=#{size} --ondisk=#{dsk}"
+      end
+      if parttype == "primary" then
+        ret += " --asprimary"
+      end
+      ret += "\n"
+      return ret
+    end
+  end
+
 
 end  
 

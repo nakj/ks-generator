@@ -1,3 +1,10 @@
+2011-08-01    <jin@localhost.localdomain>
+
+	* test.cgi (Foo#parse2): ディスクパーティション設定を追加。
+	ちゃんとエラーチェックしなきゃ
+
+	* list.html: add disk0.nomodify flag
+
 2011-07-29    <jin@localhost.localdomain>
 
 	* list.html: base packages are selected by default.
