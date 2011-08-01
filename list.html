@@ -256,8 +256,9 @@ th { background-color: palegreen}
 </table>
 <p>
 <table border=1>
-  <tr><td colspan="8" align="center">DISK0</td></tr>
-  <tr><td colspan="8">ディスク名：<input type="text" name="disk0.name" value="sda"></td></tr>
+  <tr><td colspan="9" align="center">DISK0</td></tr>
+  <tr><td colspan="3"><input type="checkbox" name="disk0.nomodify" value="true">ここでは設定しない </td>
+<td colspan="6">ディスク名：<input type="text" name="disk0.name" value="sda"></td></tr>
 <th>パーティション1</th>
 <td class="headline">区画</td><td><input type="radio" name="disk0.part1.parttype" value="primary">基本</input></td>
 <td><input type="radio" name="disk0.part1.parttype" value="extended">拡張</input>
@@ -365,8 +366,6 @@ th { background-color: palegreen}
 <td class="headline">ボリュームラベル</td>
 <td><input type="text" name="disk0.part10.label"></td>
 </tr>
-
-
 </table>
       
 
