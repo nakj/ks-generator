@@ -142,7 +142,7 @@ url --url http://192.168.56.254/rhel6
     f.puts(config)
   end
   def part(i,input)
-    if input["disk#{i}.nomodify"] then
+    if input["disk#{i}.modify"] == "nomodify" then
       return ""
     end
     #input からディスクi に関するところだけ抜き出す
@@ -168,8 +168,9 @@ url --url http://192.168.56.254/rhel6
 =end  
     ret = ""
     s = ""
-
-    ret += "clearpart --all --drives=#{di['name']}\n"
+    if di["modify"] == "clearpart"  then
+      ret += "clearpart --all --drives=#{di['name']}\n"
+    end
     for i in 1..10
       s = slices(i,di)
       unless s == nil then

@@ -257,8 +257,13 @@ th { background-color: palegreen}
 <p>
 <table border=1>
   <tr><td colspan="9" align="center">DISK0</td></tr>
-  <tr><td colspan="3"><input type="checkbox" name="disk0.nomodify" value="true">ここでは設定しない </td>
-<td colspan="6">ディスク名：<input type="text" name="disk0.name" value="sda"></td></tr>
+  <tr><td colspan="2"><select name="disk0.modify">
+<option value="nomodify">ここでは設定しない</option>
+<option value="clearpart">全てのパーティションを削除</option>
+<option value=" ">既存のパーティションを残す</option>
+</select>
+</td>
+<td colspan="2">ディスク名：<input type="text" name="disk0.name" value="sda"></td></tr>
 <th>パーティション1</th>
 <td class="headline">区画</td><td><input type="radio" name="disk0.part1.parttype" value="primary">基本</input></td>
 <td><input type="radio" name="disk0.part1.parttype" value="extended">拡張</input>

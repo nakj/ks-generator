@@ -1,6 +1,7 @@
 2011-08-02    <jin@localhost.localdomain>
 
 	* test.cgi (Foo#part): add clearpart.
+	(Foo#part): change modify flag from checkbox to select field.
 
 2011-08-01    <jin@localhost.localdomain>
 
