@@ -375,7 +375,7 @@ th { background-color: palegreen}
 
 
 <h2>3. ネットワークインターフェース設定</h2>
-<h2>4-1. パッケージ選択</h2>
+<h2>4-1. パッケージグループの選択</h2>
 <table border=1>
 
 
@@ -521,6 +521,16 @@ th { background-color: palegreen}
 <tr><td><input type="checkbox" name="fw.https" value="true">安全な WWW (HTTPS)</input></td></tr>
 
 </table>
+
+<h2>5-2. SELinux の設定</h2>
+<table border=1>
+  <tr>
+    <th>SELinux</th>
+    <td><input type="radio" name="selinux" value="enforcing" checked>Enforcing</input></td>
+    <td><input type="radio" name="selinux" value="permissive" >Permissive</input></td>
+    <td><input type="radio" name="selinux" value="disabled" >無効</input></td>
+  </tr>
+  </table>
 
 </form>
 </body>

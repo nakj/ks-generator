@@ -32,7 +32,7 @@ class Foo
     input.each{|x|
       p x
     }
-#    p input
+#   p input
     print "<pre>"
 
     print "<br><br><br><br><br>"
