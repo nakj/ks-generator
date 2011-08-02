@@ -169,7 +169,7 @@ url --url http://192.168.56.254/rhel6
     ret = ""
     s = ""
 
-
+    ret += "clearpart --all --drives=#{di['name']}\n"
     for i in 1..10
       s = slices(i,di)
       unless s == nil then

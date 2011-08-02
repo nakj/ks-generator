@@ -1,4 +1,10 @@
+2011-08-02    <jin@localhost.localdomain>
+
+	* test.cgi (Foo#part): add clearpart.
+
 2011-08-01    <jin@localhost.localdomain>
+
+	* list.html: rename odd param.
 
 	* test.cgi (Foo#parse2): ディスクパーティション設定を追加。
 	ちゃんとエラーチェックしなきゃ
