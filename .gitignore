@@ -1,5 +1,2 @@
 *~
-tmp/ks.cfg
-tmp/*.xml
-tmp/*.csv
-tmp/*list
+tmp/*
