@@ -36,9 +36,10 @@ class Foo
     print "<pre>"
 
     print "<br><br><br><br><br>"
-    c = self.parse(input)
-    c += self.parse2(input)
-    c += self.parse3(input)
+    c = self.parse(input)    #general setting.
+    c += self.parse2(input)  #disk partitioning.
+    c += self.parse3(input)  #package selection.
+    c += self.parse4(input)  #%post section
     self.output(c)
     print "</body></html>"
   end
@@ -134,6 +135,13 @@ url --url http://192.168.56.254/rhel6
     config += pkgs
     return config
   end
+  def parse4(input)
+    post = "#Script section"
+    post += "%post"
+
+    return post
+  end
+
   def output(config)
     print "<pre>"
     puts config

@@ -1,3 +1,7 @@
+2011-08-03  jin  <jin@sango.endure.ddo.jp>
+
+	* test.cgi (Foo#main): add %post section generator method.
+
 2011-08-02    <jin@localhost.localdomain>
 
 	* list.html: add SELinux configuration
