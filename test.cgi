@@ -91,11 +91,10 @@ url --url http://192.168.56.254/rhel6
     fw  = ""
     if input['firewall'] == "enabled" then
       fw = "firewall --enabled"
-      port = $ports
-      port.each{|p|
-        s = "fw." + p
-        if input[s] then
-          fw += " --" + p 
+      services = ["ssh","telnet","smtp","http","ftp"]
+      services.each{|s|
+        if input["fw."+s] then
+          fw += " --" + s
         end
       }
 
