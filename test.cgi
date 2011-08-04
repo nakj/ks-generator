@@ -88,6 +88,7 @@ url --url http://192.168.56.254/rhel6
     tz += "\n"
     config += tz
     
+    #firewall not complete yet
     fw  = ""
     if input['firewall'] == "enabled" then
       fw = "firewall --enabled"
@@ -103,6 +104,15 @@ url --url http://192.168.56.254/rhel6
     end
     fw += "\n"
     config += fw
+
+    #selinux
+    sl = ""
+    if input['selinux']  then
+      sl += "selinux --" + input['selinux']
+      sl += "\n"
+
+    end
+    config += sl
 
     return config
   end

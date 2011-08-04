@@ -1,3 +1,8 @@
+2011-08-04    <jin@localhost.localdomain>
+
+	* test.cgi (Foo#parse): addselinux.
+	
+	
 2011-08-03  jin  <jin@sango.endure.ddo.jp>
 
 	* test.cgi (Foo#main): add %post section generator method.
