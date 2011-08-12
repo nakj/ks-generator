@@ -196,3 +196,18 @@ xh_ZA.UTF-8 utf8 latarcyrheb-sun16 Xhosa (South Africa)
 zu_ZA.UTF-8 utf8 latarcyrheb-sun16 Zulu (South Africa)
 
 
+network
+
+system-config-network で設定した際に更新されるファイル
+# find . -mmin -1
+.
+./ppp/pap-secrets
+./ppp/chap-secrets
+./wvdial.conf
+./sysconfig/network
+./sysconfig/network-scripts/ifcfg-eth0
+./sysconfig/network-scripts/ifcfg-eth1
+./sysconfig/networking/profiles/default/ifcfg-eth0
+./sysconfig/networking/profiles/default/ifcfg-eth1
+./sysconfig/networking/devices/ifcfg-eth0
+./sysconfig/networking/devices/ifcfg-eth1

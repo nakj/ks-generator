@@ -1,3 +1,7 @@
+2011-08-12    <jin@localhost.localdomain>
+
+	* test.cgi (Foo#fw_post): fix firewall parsing routine.
+
 2011-08-04    <jin@localhost.localdomain>
 
 	* test.cgi (Foo#parse): addselinux.
