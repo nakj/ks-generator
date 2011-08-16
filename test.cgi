@@ -249,7 +249,11 @@ firstboot --disable
     elsif input['firewall'] == "disabled" then
       ret += "--disabled\n"
     end
-
+    services = ["ssh","telnet","smtp","http","ftp"]
+    services.each{|x|
+      if input["fw." + x] then
+        ret += "--service=" + x + "\n"
+      end
     $srvs.each{|x|
       if input["fw." + x['srv']] then
         ret += "--service=" + x['srv'] + "\n"
