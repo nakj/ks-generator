@@ -48,8 +48,8 @@ class Foo
     config ="#version RHEL6
 text
 install
-#url --url http://192.168.56.254/rhel6
-url --url http://172.16.237.254/rhel6
+#url --url http://192.168.56.254/sl6
+url --url http://172.16.237.254/sl6
 
 firstboot --disable
 "
@@ -99,9 +99,9 @@ firstboot --disable
       services = ["ssh","telnet","smtp","http","ftp"]
       services.each{|s|
         if input["fw."+s] then
-          fw += " --" + s 
+          fw += " --" + s
         end
-	}	
+        }
       $srvs.each{|x|
       if input["fw." + x['srv']] then
         #p x['srv']
@@ -215,6 +215,7 @@ firstboot --disable
   end
 
   def slices(i,di)
+
     dsk = di['name']
 
     label = di["part#{i}.label"]
@@ -249,12 +250,7 @@ firstboot --disable
     elsif input['firewall'] == "disabled" then
       ret += "--disabled\n"
     end
-    services = ["ssh","telnet","smtp","http","ftp"]
-    services.each{|x|
-      if input["fw." + x] then
-        ret += "--service=" + x + "\n"
-      end
-      }	
+
     $srvs.each{|x|
       if input["fw." + x['srv']] then
         ret += "--service=" + x['srv'] + "\n"
