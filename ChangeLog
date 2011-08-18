@@ -1,3 +1,7 @@
+2011-08-18    <jin@localhost.localdomain>
+
+	* test.cgi (Foo#parse): detached of "url" and rhel6 depend array from test.cgi to cofig/ directory.
+
 2011-08-12    <jin@localhost.localdomain>
 
 	* test.cgi (Foo#fw_post): fix firewall parsing routine.
