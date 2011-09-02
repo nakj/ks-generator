@@ -375,12 +375,61 @@ th { background-color: palegreen}
 
 
 <h2>3. ネットワークインターフェース設定</h2>
+<table border=1>
+<tr>
+  <th>接続名</th>
+  <td><input type="text" name="net.0.name" value="System eth0"></td>
+  <td>MACアドレス<input type="text" name="net.0.mac" value=""></td>
+</tr>
+<tr>
+  <th>自動接続</th>
+  <td colspan="2">
+    <input type="radio" name="net.0.autostart" value="true" checked>する
+    <input type="radio" name="net.0.autostart" value="false">しない
+    </td>
+</tr>
+<tr>
+  <th>IPv4</th>
+  <td colspan="2">
+    <input type="radio" name="net.0.ipv4" value="enable" checked>有効
+    <input type="radio" name="net.0.ipv4" value="disable">無効
+  </td>
+</tr>
+<tr>
+  <th rowspan="3">IPv4アドレスの設定</th>
+  <td colspan="2">
+    <input type="radio" name="net.0.ipv4.dhcp" value="enable" checked> DHCPを使用する
+    <input type="radio" name="net.0.ipv4.dhcp" value="disable">固定
+  </td>
+</tr>
+<tr>
+  <th>IPアドレス</th>
+  <td><input type="text" name="net.0.ipv4.ipaddr"></td>
+</tr>
+<tr>
+  <th>Prefix (Netmask)</th>
+  <td><input type="text" name="net.0.ipv4.netmask"></td>
+</tr>
+<tr>
+  <th>DNSサーバ</th>
+  <td colspan="2">
+    <input type="text" name="net.0.ipv4.dns" size="60">
+  </td>
+</tr>
+<tr>
+  <th>ドメインを検索</th>
+  <td colspan="2">
+    <input type="text" name="net.0.ipv4.domain0">
+    <input type="text" name="net.0.ipv4.domain1">
+  </td>
+</tr>
+</table>
+
+
+
+
 <h2>4-1. パッケージグループの選択</h2>
 <table border=1>
-
-
-
-
 <input type="submit" value="送信">
 
 <table border=1>

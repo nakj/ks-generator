@@ -265,6 +265,7 @@ firstboot --disable
 
 end  
 
-
+if $0 == __FILE__ then
 f = Foo.new
 f.main
+end
