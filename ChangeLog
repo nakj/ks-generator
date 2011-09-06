@@ -1,5 +1,9 @@
 2011-09-06    <jin@localhost.localdomain>
 
+	* list.html: fix incorrect defalut value like System eth0
+
+	* test.cgi (Foo#net_post): add network configuration.
+
 	* list.html: add eth1, eth2 table.
 
 2011-09-02    <jin@localhost.localdomain>

@@ -160,6 +160,7 @@ firstboot --disable
     post = "#Script section\n"
     post += "%post\n"
     post += fw_post(input)
+    post += net_post(input)
     return post
   end
 
@@ -257,8 +258,95 @@ firstboot --disable
         ret += "--service=" + x['srv'] + "\n"
       end
     }
-    ret =  "echo '"  + ret + "'>/etc/sysconfig/system-config-firewall"
+    ret =  "echo '"  + ret + "'>/etc/sysconfig/system-config-firewall\n"
 
+    return ret
+  end
+  def net1(h,i)
+    ret = ""
+    
+    #interface enable?
+    if h['enable'] == "no" then
+      return ""
+    end
+    file = sprintf("/etc/sysconfig/network-scripts/ifcfg-eth%d",i)
+
+    # hardware address 
+    unless h['mac'].length == 12 then
+    ret+= "IF=eth" + i.to_s + "\n"
+    end
+    ret += "echo \""
+    ret += "DEVICE=eth" + i.to_s + "\n"
+    if h['mac'].length == 12 then
+      mac = h['mac'].upcase
+      ret += sprintf("HWADDR=%s:%s:%s:%s:%s:%s\n",mac[0..1],mac[2..3],mac[4..5],mac[6..7],mac[8..9],mac[10..11])
+    else
+      ret += "HWADDR=$(get_hwaddr ${IF})\n"
+    end
+    # boot protocol 
+    if h['ipv4']['dhcp'] == "enable" then
+      ret += sprintf("BOOTPROTO=dhcp\n")
+    else
+      ret += sprintf("BOOTPROTO=none\n")
+      ret += sprintf("IPADDR=%s\n",h['ipv4']['ipaddr'])
+      ret += sprintf("NETMASK=%s\n",h['ipv4']['netmask'])
+    end
+    ret += sprintf("\">%s\n",file)
+
+    return ret
+  end
+  def net_post(input)
+    ret = ""
+    ret +='get_hwaddr ()
+{
+    if [ -f /sys/class/net/${1}/address ]; then
+        awk \'{ print toupper($0) }\' < /sys/class/net/${IF}/address
+    elif [ -d \"/sys/class/net/${1}\" ]; then
+        LC_ALL= LANG= ip -o link show ${1} 2>/dev/null | \
+           awk \'{ print toupper(gensub(/.*link\/[^ ]* ([[:alnum:]:]*).*/,
+                                        \"\\1\", 1)); }\'
+    fi
+}
+'
+    h = {}
+    r = []
+    input.each{|x|
+      n = []
+      if x[0].match(/^net/) then
+        n = x[0].split(/\s*\.\s*/)
+        n << x[1]
+        r << n
+      end
+    }
+
+    b = []
+    r.each{|x|
+      b <<  x[1]
+    }
+     len = b.uniq.size
+    i = 0
+    while i < len
+      h = {}
+      ipv4={}
+      a = []
+      r.each{|x|
+        if x[1] == i.to_s then
+          a << x[2..4]
+        end
+      }
+      a.each{|x|
+        if x[0] == "ipv4" then
+          ipv4[x[1]] = x[2]
+        else
+          h[x[0]] = x[1]
+        end
+        h['ipv4'] = ipv4
+      }
+      ret += self.net1(h,i)
+      
+
+      i += 1
+    end
     return ret
   end
 
