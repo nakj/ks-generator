@@ -1,4 +1,4 @@
-2011-09-06    <jin@localhost.localdomain>
+2011-09-06  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* list.html: fix incorrect defalut value like System eth0
 
@@ -6,28 +6,27 @@
 
 	* list.html: add eth1, eth2 table.
 
-2011-09-02    <jin@localhost.localdomain>
+2011-09-02  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* list.html: add eth0 table(ipv4 only)x
 
-2011-08-18    <jin@localhost.localdomain>
+2011-08-18  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* test.cgi (Foo#parse): detached of "url" and rhel6 depend array from test.cgi to cofig/ directory.
 
-2011-08-12    <jin@localhost.localdomain>
+2011-08-12  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* test.cgi (Foo#fw_post): fix firewall parsing routine.
 
-2011-08-04    <jin@localhost.localdomain>
+2011-08-04  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* test.cgi (Foo#parse): addselinux.
-	
-	
-2011-08-03  jin  <jin@sango.endure.ddo.jp>
+
+2011-08-03  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* test.cgi (Foo#main): add %post section generator method.
 
-2011-08-02    <jin@localhost.localdomain>
+2011-08-02  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* list.html: add SELinux configuration
 
@@ -35,7 +34,7 @@
 	(Foo#part): change modify flag from checkbox to select field.
 
 
-2011-08-01    <jin@localhost.localdomain>
+2011-08-01  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* list.html: rename odd param.
 
@@ -44,7 +43,7 @@
 
 	* list.html: add disk0.nomodify flag
 
-2011-07-29    <jin@localhost.localdomain>
+2011-07-29  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* list.html: base packages are selected by default.
 	add stylesheet.
