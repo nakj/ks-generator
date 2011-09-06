@@ -27,10 +27,10 @@ class Foo
     print "Content-Type: text/html\n\n"
     print "<html><body>inputdata= "
     print "<pre>"
-    input.each{|x|
-      p x
-    }
-#   p input
+#    input.each{|x|
+#      p x
+#    }
+   p input
     print "<pre>"
 
     print "<br><br><br><br><br>"

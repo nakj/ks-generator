@@ -375,7 +375,14 @@ th { background-color: palegreen}
 
 
 <h2>3. ネットワークインターフェース設定</h2>
+
 <table border=1>
+<tr>
+<th>eth0</th>
+<td><select name="net.0.enable">
+<option value="yes" selected>有効</option>
+<option value="no">無効</option>
+
 <tr>
   <th>接続名</th>
   <td><input type="text" name="net.0.name" value="System eth0"></td>
@@ -384,15 +391,15 @@ th { background-color: palegreen}
 <tr>
   <th>自動接続</th>
   <td colspan="2">
-    <input type="radio" name="net.0.autostart" value="true" checked>する
-    <input type="radio" name="net.0.autostart" value="false">しない
+    <input type="radio" name="net.0.onboot" value="yes" checked>する
+    <input type="radio" name="net.0.onboot" value="no">しない
     </td>
 </tr>
 <tr>
   <th>IPv4</th>
   <td colspan="2">
-    <input type="radio" name="net.0.ipv4" value="enable" checked>有効
-    <input type="radio" name="net.0.ipv4" value="disable">無効
+    <input type="radio" name="net.0.ipv4.is" value="enable" checked>有効
+    <input type="radio" name="net.0.ipv4.is" value="disable">無効
   </td>
 </tr>
 <tr>
@@ -419,12 +426,123 @@ th { background-color: palegreen}
 <tr>
   <th>ドメインを検索</th>
   <td colspan="2">
-    <input type="text" name="net.0.ipv4.domain0">
+    <input type="text" name="net.0.ipv4.domain0">/
     <input type="text" name="net.0.ipv4.domain1">
   </td>
 </tr>
 </table>
 
+<table border=1>
+<tr>
+<th>eth1</th>
+<td><select name="net.1.enable">
+<option value="yes">有効</option>
+<option value="no" selected>無効</option>
+
+<tr>
+  <th>接続名</th>
+  <td><input type="text" name="net.1.name" value="System eth0"></td>
+  <td>MACアドレス<input type="text" name="net.1.mac" value=""></td>
+</tr>
+<tr>
+  <th>自動接続</th>
+  <td colspan="2">
+    <input type="radio" name="net.1.onboot" value="yes" checked>する
+    <input type="radio" name="net.1.onboot" value="no">しない
+    </td>
+</tr>
+<tr>
+  <th>IPv4</th>
+  <td colspan="2">
+    <input type="radio" name="net.1.ipv4.is" value="enable" checked>有効
+    <input type="radio" name="net.1.ipv4.is" value="disable">無効
+  </td>
+</tr>
+<tr>
+  <th rowspan="3">IPv4アドレスの設定</th>
+  <td colspan="2">
+    <input type="radio" name="net.1.ipv4.dhcp" value="enable" checked> DHCPを使用する
+    <input type="radio" name="net.1.ipv4.dhcp" value="disable">固定
+  </td>
+</tr>
+<tr>
+  <th>IPアドレス</th>
+  <td><input type="text" name="net.1.ipv4.ipaddr"></td>
+</tr>
+<tr>
+  <th>Prefix (Netmask)</th>
+  <td><input type="text" name="net.1.ipv4.netmask"></td>
+</tr>
+<tr>
+  <th>DNSサーバ</th>
+  <td colspan="2">
+    <input type="text" name="net.1.ipv4.dns" size="60">
+  </td>
+</tr>
+<tr>
+  <th>ドメインを検索</th>
+  <td colspan="2">
+    <input type="text" name="net.1.ipv4.domain0">/
+    <input type="text" name="net.1.ipv4.domain1">
+  </td>
+</tr>
+</table>
+
+<table border=1>
+<tr>
+<th>eth2</th>
+<td><select name="net.2.enable">
+<option value="yes">有効</option>
+<option value="no" selected>無効</option>
+
+<tr>
+  <th>接続名</th>
+  <td><input type="text" name="net.2.name" value="System eth0"></td>
+  <td>MACアドレス<input type="text" name="net.2.mac" value=""></td>
+</tr>
+<tr>
+  <th>自動接続</th>
+  <td colspan="2">
+    <input type="radio" name="net.2.onboot" value="yes" checked>する
+    <input type="radio" name="net.2.onboot" value="no">しない
+    </td>
+</tr>
+<tr>
+  <th>IPv4</th>
+  <td colspan="2">
+    <input type="radio" name="net.2.ipv4.is" value="enable" checked>有効
+    <input type="radio" name="net.2.ipv4.is" value="disable">無効
+  </td>
+</tr>
+<tr>
+  <th rowspan="3">IPv4アドレスの設定</th>
+  <td colspan="2">
+    <input type="radio" name="net.2.ipv4.dhcp" value="enable" checked> DHCPを使用する
+    <input type="radio" name="net.2.ipv4.dhcp" value="disable">固定
+  </td>
+</tr>
+<tr>
+  <th>IPアドレス</th>
+  <td><input type="text" name="net.2.ipv4.ipaddr"></td>
+</tr>
+<tr>
+  <th>Prefix (Netmask)</th>
+  <td><input type="text" name="net.2.ipv4.netmask"></td>
+</tr>
+<tr>
+  <th>DNSサーバ</th>
+  <td colspan="2">
+    <input type="text" name="net.2.ipv4.dns" size="60">
+  </td>
+</tr>
+<tr>
+  <th>ドメインを検索</th>
+  <td colspan="2">
+    <input type="text" name="net.2.ipv4.domain0">/
+    <input type="text" name="net.2.ipv4.domain1">
+  </td>
+</tr>
+</table>
 
 
 
