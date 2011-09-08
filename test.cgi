@@ -292,7 +292,6 @@ firstboot --disable
       ret += sprintf("NETMASK=%s\n",h['ipv4']['netmask'])
     end
     ret += sprintf("\">%s\n",file)
-
     return ret
   end
   def net_post(input)
@@ -343,8 +342,6 @@ firstboot --disable
         h['ipv4'] = ipv4
       }
       ret += self.net1(h,i)
-      
-
       i += 1
     end
     return ret
