@@ -339,6 +339,25 @@ firstboot --disable
       ret += self.net1(h,i)
       i += 1
     end
+    # resolv.conf
+    ret += 'echo "search '
+    
+    r.each{|x|
+      if x[3] == "domain0" or x[3] == "domain1" then
+        if x[4].length > 0 then
+          ret +=  sprintf("%s ",x[4])
+        end
+      end
+    }
+    ret += "\n"
+    r.each{|x|
+
+      if x[3] == "dns" and x[4].length > 0 then
+        ret += sprintf("nameserver %s\n", x[4])
+      end
+    }
+    ret+= '">/etc/resolv.conf'
+
     return ret
   end
   def hostname_post(input)
