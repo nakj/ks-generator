@@ -36,7 +36,7 @@ class Foo
     print "<br><br><br><br><br>"
     c = self.parse(input)    #general setting.
     c += self.parse2(input)  #disk partitioning.
-    c += self.parse3(input)  #package selection.
+    c += self.parse3(input)  #package section.
     c += self.parse4(input)  #%post section
     self.output(c)
     print "</body></html>"
@@ -161,6 +161,7 @@ firstboot --disable
     post += "%post\n"
     post += fw_post(input)
     post += net_post(input)
+    post += hostname_post(input)
     return post
   end
 
@@ -190,12 +191,6 @@ firstboot --disable
       end
     
     }
-=begin
-#debug よう
-  di.sort.each{|x|
-    p x
-  }
-=end  
     ret = ""
     s = ""
     if di["modify"] == "clearpart"  then
@@ -344,6 +339,37 @@ firstboot --disable
       ret += self.net1(h,i)
       i += 1
     end
+    return ret
+  end
+  def hostname_post(input)
+    ret=""
+    r = []
+    @networking = nil
+    @hostname = ""
+
+    input.each{|x|
+      y = x[0].split(/\s*\.\s*/)
+      y << x[1]
+      if y[0] == "net" and y[2] == "enable" then
+        r << y[3]
+      end
+      
+    }
+    if r.index("yes") >= 0 then
+      @networking = "yes"
+    else
+      @networking = "no"
+    end
+    len = input['hostname'].length 
+    if len  > 0 and len < 255 then
+      @hostname = input['hostname']
+    else
+      @hostname = "localhost.localdomain"
+    end
+    ret += sprintf('echo "')
+    ret += sprintf("NETWORKING=%s\n", @networking)
+    ret += sprintf("HOSTNAME=%s\n", @hostname)
+    ret += sprintf("\">/etc/sysconfig/network\n")
     return ret
   end
 

@@ -1,3 +1,7 @@
+2011-09-09  Hitoshi NAKAMORI  <nakj@trashbox.jp>
+
+	* test.cgi (Foo#hostname_post): add function. hostname
+
 2011-09-08  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* test.cgi: delete unnecessary empty line.
