@@ -356,7 +356,7 @@ firstboot --disable
         ret += sprintf("nameserver %s\n", x[4])
       end
     }
-    ret+= '">/etc/resolv.conf'
+    ret+= '">/etc/resolv.conf' + "\n"
 
     return ret
   end
