@@ -374,10 +374,10 @@ firstboot --disable
       end
       
     }
-    if r.index("yes") >= 0 then
-      @networking = "yes"
-    else
+    if r.index("yes") == nil then
       @networking = "no"
+    else
+      @networking = "yes"
     end
     len = input['hostname'].length 
     if len  > 0 and len < 255 then
