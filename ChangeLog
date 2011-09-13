@@ -1,6 +1,10 @@
 2011-09-13  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
+	* list.html: add default router.
+
 	* gen.cgi: remove get_hwaddr function.
+	(Foo#slices): add check null.
+	(Foo#net1): add default router.
 
 2011-09-12  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 

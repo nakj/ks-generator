@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 require "cgi-lib"
+require "ipaddr"
 require "config/config"
 require "config/rhel6"
 
@@ -211,7 +212,9 @@ firstboot --disable
     dsk = di['name']
 
     label = di["part#{i}.label"]
-    odd = di['odd'].gsub(/^disk[0-9]\.part/,"").gsub(/.odd$/,"")
+    unless di['odd']  == nil then
+      odd = di['odd'].gsub(/^disk[0-9]\.part/,"").gsub(/.odd$/,"")
+    end
     parttype = di["part#{i}.parttype"]
     fs = di['fstype']
     if label == "swap" then
@@ -286,6 +289,10 @@ firstboot --disable
       ret += sprintf("BOOTPROTO=none\n")
       ret += sprintf("IPADDR=%s\n",h['ipv4']['ipaddr'])
       ret += sprintf("NETMASK=%s\n",h['ipv4']['netmask'])
+      ipaddr = IPAddr.new "#{h['ipv4']['ipaddr']}/#{h['ipv4']['netmask']}"
+      if ipaddr.include?(h['defroute']) then
+        ret += sprintf("GATEWAY=%s\n",h['defroute'])
+      end
     end
     ret += sprintf("\">%s\n",file)
     return ret
@@ -296,6 +303,10 @@ firstboot --disable
 . /etc/sysconfig/network-scripts/network-functions\n"
     h = {}
     r = []
+    unless input['defroute'] == "" or input['defroute'] == nil then
+      defroute = input['defroute']
+    end
+
     input.each{|x|
       n = []
       if x[0].match(/^net/) then
