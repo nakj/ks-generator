@@ -276,7 +276,8 @@ firstboot --disable
       mac = h['mac'].upcase
       ret += sprintf("HWADDR=%s:%s:%s:%s:%s:%s\n",mac[0..1],mac[2..3],mac[4..5],mac[6..7],mac[8..9],mac[10..11])
     else
-      ret += "HWADDR=$(get_hwaddr ${IF})\n"
+      ret += sprintf("HWADDR=$(get_hwaddr %s)\n","eth" + i.to_s )
+
     end
     # boot protocol 
     if h['ipv4']['dhcp'] == "enable" then
@@ -290,18 +291,9 @@ firstboot --disable
     return ret
   end
   def net_post(input)
-    ret = ""
-    ret +='get_hwaddr ()
-{
-    if [ -f /sys/class/net/${1}/address ]; then
-        awk \'{ print toupper($0) }\' < /sys/class/net/${IF}/address
-    elif [ -d \"/sys/class/net/${1}\" ]; then
-        LC_ALL= LANG= ip -o link show ${1} 2>/dev/null | \
-           awk \'{ print toupper(gensub(/.*link\/[^ ]* ([[:alnum:]:]*).*/,
-                                        \"\\1\", 1)); }\'
-    fi
-}
-'
+    ret = "\n"
+    ret +="# network configuration
+. /etc/sysconfig/network-scripts/network-functions\n"
     h = {}
     r = []
     input.each{|x|
