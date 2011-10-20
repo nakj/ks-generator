@@ -42,7 +42,13 @@ class ParamSheet
         end
       }
       if g[2] == nil then
-        g << el.at("description").inner_text
+        d = el.at("description")
+        unless d == nil then
+          g << d.inner_text
+          else
+          g << ""
+        end
+
       end
 
       ret << g

@@ -1,6 +1,7 @@
 2011-10-20  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* scripts/comps2csv.rb (ParamSheet#groups): fix for SL6 specific package groups.
+	(ParamSheet#groups): fix for CentOS5.7 missing group define.
 
 2011-09-13  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
