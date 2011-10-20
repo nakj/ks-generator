@@ -1,3 +1,7 @@
+2011-10-20  Hitoshi NAKAMORI  <nakj@trashbox.jp>
+
+	* scripts/comps2csv.rb (ParamSheet#groups): fix for SL6 specific package groups.
+
 2011-09-13  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* list.html: add default router.

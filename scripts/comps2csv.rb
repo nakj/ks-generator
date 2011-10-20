@@ -33,11 +33,18 @@ class ParamSheet
           g << n.inner_text.toutf8
         end
       }
+      if g[1] == nil then
+        g <<  el.at("name").inner_text
+      end
       el.search("description").each{|d|
         if d.attributes['xml:lang'] == "ja"
           g << d.inner_text.toutf8
         end
       }
+      if g[2] == nil then
+        g << el.at("description").inner_text
+      end
+
       ret << g
     }
     return ret
