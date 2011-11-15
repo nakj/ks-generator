@@ -70,7 +70,9 @@ class ParamSheet
 
       cat.search("groupid").each{|gid|
         grp = gl.assoc(gid.inner_text)
-        ary << grp
+        unless grp == nil then
+          ary << grp
+        end
       }
       ret = ret + ary.sort!{|a,b| a[1] <=> b[1]}
     }

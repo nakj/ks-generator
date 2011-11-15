@@ -1,3 +1,9 @@
+2011-11-15  Hitoshi NAKAMORI  <nakj@trashbox.jp>
+
+	* scripts/comps2csv.rb (ParamSheet#ctg): add null check. found bug at parsing RHEL5 Server 's comps file.
+
+	* doc/rhel5: add memo file
+
 2011-10-20  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
 	* scripts/comps2csv.rb (ParamSheet#groups): fix for SL6 specific package groups.
