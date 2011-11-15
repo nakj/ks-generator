@@ -1,5 +1,7 @@
 2011-11-15  Hitoshi NAKAMORI  <nakj@trashbox.jp>
 
+	* rhel5.cgi (ParamSheet): add new class. copy from scripts/comps2csv.rb
+
 	* scripts/comps2csv.rb (ParamSheet#ctg): add null check. found bug at parsing RHEL5 Server 's comps file.
 
 	* doc/rhel5: add memo file
